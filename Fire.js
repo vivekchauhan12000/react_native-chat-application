@@ -9,12 +9,12 @@ class Fire {
   init = () => {
     if (!firebase.apps.length) {
       firebase.initializeApp({
-        apiKey: "AIzaSyC_Xzf2Zi7QI8qjqaxLRLv1v1J6mECbCaU",
-        authDomain: "chatapp-93728.firebaseapp.com",
-        databaseURL: "https://chatapp-93728.firebaseio.com",
-        projectId: "chatapp-93728",
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
         storageBucket: "",
-        messagingSenderId: "522346972480",
+        messagingSenderId: "",
         
     
       });
