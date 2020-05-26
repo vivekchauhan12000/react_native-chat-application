@@ -5,9 +5,12 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-  Image
+  Image,
+  Alert
 } from 'react-native';
-import {Icon} from "native-base";
+import {Icon, Button} from "native-base";
+
+
 
 class LoginScreen extends React.Component {
   static navigationOptions = {
@@ -30,26 +33,33 @@ class LoginScreen extends React.Component {
         <View style={{backgroundColor:"#21e6c1"}}>
       <View style={styles.circle} />
 
-      <View style={{ marginTop: 150 }}>
+      <View style={{ marginTop: 110 }}>
+      
           <Image
               source={require("../assets/chat.png")}
               style={{ width: 100, height: 100, alignSelf: "center" }}
           />
       </View>
       <View style={{ marginHorizontal: 32 }}>
-          <Text style={styles.header}>Game Name</Text>
+          <Text style={styles.header}>Sociallic</Text>
+          
           <TextInput
               style={styles.input}
-              placeholder="blue knight"
+              placeholder="Game name example:Pubg"
               onChangeText={this.onChangeText}
               value={this.state.name}
           />
-          <View style={{ alignItems: "flex-end", marginTop: 64 }}>
-              <TouchableOpacity style={styles.continue} onPress={this.onPress}>
+          
+          <View style={{ alignItems: "flex-end" }}>
+              <TouchableOpacity style={styles.continue} onPress={this.onPress} >
               <Icon name="arrow-forward" style={{ color: "#ffffff" }} />
               </TouchableOpacity>
+              
+              <Text style={{fontSize:14,color:""}}>Please don't share personal detail only share game lobby ,key server etc.</Text>
+             
           </View>
       </View>
+      
       </View>
   </View>
     );
@@ -60,8 +70,8 @@ const offset = 24;
 
 const styles = StyleSheet.create({
   container:{
+    flex:1,
   backgroundColor:"#21e6c1",
- 
   },
   title: {
     marginTop: offset,
@@ -109,6 +119,7 @@ input: {
     color: "#1f4287",
     fontWeight: "600",
     backgroundColor:"#21e6c1",
+  
    
 
 },
@@ -119,8 +130,9 @@ continue: {
     backgroundColor: "#1f4287",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom:100
-}
+   
+},
+
 });
 
 export default LoginScreen;

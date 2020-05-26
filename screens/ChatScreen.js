@@ -33,7 +33,7 @@ class ChatScreen extends React.Component<Props> {
          <Header  style={{ backgroundColor: '#1f4287' }}> 
           <Left>
             <Button transparent>
-              <Icon name='gamepad' />
+              <Icon name='logo-game-controller-b'/>
             </Button>
           </Left>
           <Body>
@@ -67,8 +67,7 @@ class ChatScreen extends React.Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex:1,
-   
-    backgroundColor:"#21e6c1"
+   backgroundColor:"#21e6c1",
   },
 });
 export default ChatScreen;
